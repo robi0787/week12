@@ -1,0 +1,55 @@
+.card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    justify-content: center;
+    margin: 0 6rem;
+}
+.card {
+    width: 100%;
+    column-gap: 10px;
+}
+
+.card-img {
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+.container {
+    padding: 2px 16px;
+    background-color: antiquewhite;
+    
+}
+
+.card-button {
+    width: 100%;
+    height: 80px;
+    margin: auto;
+    background-color: black;
+    color: azure;
+}
+
+h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+.fa-play {
+    color: white;
+}
+
+.fa-envelope {
+    font-size: 10rem;
+}
+
+iframe {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+}

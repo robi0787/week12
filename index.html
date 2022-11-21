@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts Links added before CSS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:ital,wght@0,300;0,500;1,300;1,500&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://kit.fontawesome.com/9f4d0e2aa1.js" crossorigin="anonymous"></script>
+
+    <!-- Custom Styles Sheet -->
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+
+there is a hover on navigation items. Logo, nav and search are all apart of same UL.
+
+About us:*****************************
+Mobile first design but always keep an eye on web.
+See that there is an image but about us and 2 paragraphs are beside it. Therefore these will be in 2 separate divs to easily style it for web. 
+
+Services:
+-single item layout in mobile
+-grid layout in web. 
+Important to note the order. Order remains the same. 
+
+Our Team:
+order does change. 
+img-text, img-text in mobile. 
+img-text, text-img in web. 
+
+Contact Us:
+order is also changing.
+Form-Hours-location in mobile.
+Form-location-Hours in web. 
+
+How would we write this in HTML?
+Style in mobile first. Layout of HTML will go as Mobile. 
+Use grid to change the order of the layout in web. 
+
+After a certain breakpoint, backgrounds bleed out to the edges. Cannot put all of code in a div bc footer and and banner have width of 100% no matter how bif the browser. 
+
+indivdually add width to each div. 
+        Nav tag will not have a max width but UL will have a max width and margin 0 auto. 
+
+        banner section will not have a max width but UL will have a max width and margin 0 auto.
+
+First section we will do is the 
+*********header**************
+        inside header we will have other elements. 
+        Nav will be inside the header. nav goes all the way across. But UL will have max width. 
+            Img-UL-Form or ul all throughout with logoigm-anchor tags-form inside LI. 
+                This is an easy way to style using flexbox. 
+    Div class of banner inside header with bg image.
+        Then internal div with max width with heading, paragraph and anchor tag. 
+
+Main area goes from about us to contact us. then multiple sections within the main. single page website with anchor tags jumping to each section.
+
+*************About us:******************
+        will have a class and an ID to enable that jump. 
+            Div called section content or something inside about us to enable that max width.
+                Img and heading and paragraphs in a div to easily use flexbox.  
+        
+************Our Services:***************
+        Outer div that will contain everything. 
+        internal that will contain information.Class and ID to allow jump from nav. 
+            5 cards, with an image and div with text and anchor tag. 
+            
+            Using Grid, we need to figure out how many rows and columns. 3 rows: heading, 2 cards, 3 cards. 6 columns, but may run into issue. Grid areas: 
+                head head head head head head
+                Digital X3, marketing X3
+                Video X2, Web X2, Print X2
+
+ ********* Vision:****************
+        Single div with id and class, internal div with heading, paragraph and button.
+
+        Our team section: Flex will be easier. each being 50% and change order. 
+            Outer div with internal div:
+                heading [flex base 100%], 
+                image [flex base 50%]and div with all text [flex base 50%]. 
+                image with div with all text. 
+*********Contact Us*********
+    Outer div
+        internal div with max width, margin 0.
+            can use flex or grid. Whatever works for you. 
+                Grid: 2 column, 3 row or flex.
+        Each section will be their own divs. GROUP!
+            heading flex base 100%, 
+            form flex base 50%,  
+            location flexbase 50%
+            hours of operation flex base 100%
+***********Footer:*****************
+        Footer div (outer)
+        with internal div max width margin 0
+-->
+
+    <!-- HOW TO MAKE A CARD -->
+    <div class="card-wrapper">
+        <div class="card">
+            <img src="images/img_avatar.png" alt="avatar" class="card-img">
+            <div class="container">
+                <h4>John Doe</h4>
+                <p>Architect & Engineer</p>
+                <button class="card-button">Submit</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/img_avatar.png" alt="avatar" class="card-img">
+            <div class="container">
+                <h4>John Doe</h4>
+                <p>Architect & Engineer</p>
+                <button class="card-button">Submit  <i class="fa fa-play"></i></button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/img_avatar.png" alt="avatar" class="card-img">
+            <div class="container">
+                <h4>John Doe</h4>
+                <p>Architect & Engineer</p>
+                <button class="card-button">Submit</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <h1>This is a car <i class="fa fa-car"></i></h1>
+    <h1><i class="fa-sharp fa-solid fa-magnifying-glass"></i></h1>
+    <h1><i class="fa-sharp fa-solid fa-pizza-slice"></i></h1>
+
+    <h1><i class="fa fa-envelope"></i></h1>
+    <button>Button <i class="fa fa-search"></i></button>
+
+    <h2>Location</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11215.776209056643!2d-75.7718457580664!3d45.349941632754664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0718cc4a6ad7%3A0xc6cc467725843e2b!2sAlgonquin%20College%20Ottawa%20Campus!5e0!3m2!1sen!2sca!4v1669065297958!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</body>
+
+</html>
